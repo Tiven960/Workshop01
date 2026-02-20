@@ -67,7 +67,10 @@ public class Time
     
     public override string ToString()
     {
-        return  $"{Hour % 12:D2}:{Minute:D2}:{Second:D2}.{Millisecond:D3} {(Hour >= 12 ? "PM" : "AM")}";
+        int hour12 = Hour % 12;
+        if (hour12 == 0)
+            hour12 = 12;
+        return $"{hour12:D2}:{Minute:D2}:{Second:D2}.{Millisecond:D3} {(Hour >= 12 ? "PM" : "AM")}";
     }
 
     private int ValidHour(int hour)

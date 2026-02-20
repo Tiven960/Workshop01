@@ -1,10 +1,5 @@
 ﻿using Workshop01.Backend;
 
-using System.Globalization;
-
-CultureInfo.CurrentCulture = new CultureInfo("en-US");
-CultureInfo.CurrentUICulture = new CultureInfo("en-US");
-
 try
 {
     var t1 = new Time();
