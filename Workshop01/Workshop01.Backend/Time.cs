@@ -165,18 +165,18 @@ public class Time
         return hour >= 24;
     }
 
-    public long ToMinutes()
+    public int ToMinutes()
     {
-        return Hour * 60L + Minute;
+        return Hour * 60 + Minute;
     }
 
-    public long ToSeconds()
+    public int ToSeconds()
     {
-        return (Hour * 60L + Minute) * 60 + Second;
+        return (Hour * 60 + Minute) * 60 + Second;
     }
-    public long ToMilliseconds()
+    public int ToMilliseconds()
     {
-        return ((Hour * 60L + Minute) * 60 + Second) * 1000 + Millisecond;
+        return ((Hour * 60 + Minute) * 60 + Second) * 1000 + Millisecond;
     }
 
 }
